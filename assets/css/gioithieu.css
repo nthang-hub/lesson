@@ -1,0 +1,342 @@
+/* ===== BANNER NHÓM ===== */
+
+.team-banner {
+  width: 100%;
+  height: 360px;
+  background-image: url("https://codelearn.io/images/about-us/Code-Learn-Banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lớp phủ tối giúp text nổi bật */
+.team-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+/* Nội dung text */
+.team-banner-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.team-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-banner {
+    height: 260px;
+  }
+
+  .team-title {
+    font-size: 1.8rem;
+  }
+
+  .team-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-banner {
+    height: 220px;
+  }
+}
+
+/* ========== KHUNG NGOÀI ========== */
+.about-mission-section {
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+
+.about-mission-box {
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  padding: 32px 48px 40px;
+  background-color: #ffffff;
+}
+
+/* Tiêu đề */
+.about-title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+/* ========== LƯỚI 2x2 ========== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "mission who"
+    "vision map";
+  column-gap: 60px;
+  row-gap: 32px;
+}
+
+/* Gán ô cho từng phần */
+.about-mission-image {
+  grid-area: mission;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.about-who {
+  grid-area: who;
+}
+
+.about-vision {
+  grid-area: vision;
+}
+
+.about-map {
+  grid-area: map;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ảnh */
+.about-mission-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-map img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Tiêu đề nhỏ */
+.about-who h3,
+.about-vision h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Đoạn văn */
+.about-who p,
+.about-vision p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ========== HIỆU ỨNG========== */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: all 0.6s ease;
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 991.98px) {
+  .about-mission-box {
+    padding: 24px 16px 28px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mission"
+      "who"
+      "vision"
+      "map";
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  .about-who,
+  .about-vision {
+    text-align: left;
+  }
+
+  .about-map img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-title {
+    font-size: 18px;
+  }
+
+  .about-who p,
+  .about-vision p {
+    font-size: 13px;
+  }
+}
+
+/* ===== SỨ MỆNH VÀ TẦM NHÌN ===== */
+
+.mission-vision {
+  background: #ffffff;
+}
+
+.mission-vision .mv-title {
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2rem);
+  margin-bottom: 0.25rem;
+}
+
+.mission-vision .mv-subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Card */
+.mv-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: #d4d8db;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  align-items: flex-start;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Icon circle */
+.mv-card-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+/* Màu khác nhau cho từng card */
+.mv-card--blue .mv-card-icon {
+  background: #3b82f6;
+}
+
+.mv-card--green .mv-card-icon {
+  background: #22c55e;
+}
+
+.mv-card--teal .mv-card-icon {
+  background: #14b8a6;
+}
+
+.mv-card--orange .mv-card-icon {
+  background: #f97316;
+}
+
+.mv-card-body {
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.mv-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .mv-card {
+    padding: 1.25rem 1.35rem;
+  }
+
+  .mv-card-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+}
+
+/* đội ngũ phát triển */
+/* Team Section */
+.team-section {
+  background: #ffffff;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2rem);
+  margin-bottom: 0.25rem;
+}
+
+/* Team Card */
+.team-card {
+  padding: 10px;
+}
+
+/* Avatar tròn */
+.team-avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Name */
+.team-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Role */
+.team-role {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* Mobile chỉnh nhỏ avatar */
+@media (max-width: 575.98px) {
+  .team-avatar {
+    width: 180px;
+    height: 180px;
+  }
+}

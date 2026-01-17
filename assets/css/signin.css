@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* ✅ Căn giữa ngang */
+  align-items: center;
+  background-color: #f7faff;
+  padding-left: 0;           /* ✅ Không đẩy sang trái nữa */
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 900px;
+  max-width: 95%;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Khung xanh bên trái */
+.left-panel {
+  width: 330px;
+  background-color: #91dbff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 30px;
+
+  /* BO GÓC KHỚP VỚI .container */
+  border-top-left-radius: 20px;     /* thêm */
+  border-bottom-left-radius: 20px;  /* thêm */
+
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 20px;   /* khoảng cách từ mép trên */
+  left: 20px;  /* khoảng cách từ mép trái */
+  color: white;
+  text-decoration: none;
+  z-index: 5;  /* đảm bảo nằm trên */
+}
+
+.left-panel.move-out h2,
+.left-panel.move-out p,
+.left-panel.move-out button {
+  transform: translateX(-60px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.left-panel h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.left-panel p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #00aaff;
+}
+
+/* Form đăng nhập */
+.right-panel {
+  flex: 1;
+  padding: 50px;
+  position: relative;
+}
+
+.back-icon {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 26px;
+  color: #000;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 45px 14px 15px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group label {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  background-color: #fff;
+  padding: 0 8px;
+  font-size: 15px;
+  color: #333;
+}
+
+.forgot {
+  text-align: right;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.forgot a {
+  color: #00aaff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #c8ebff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+.btn.active {
+  background-color: #91dbff;
+  cursor: pointer;
+}
+
+.btn.active:hover {
+  background-color: #63c5ff;
+}
+
+/* Social login */
+.social-login {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icons a:hover {
+  background: #88d5ff;
+  transform: scale(1.1);
+}
+
+/* Hiệu ứng nền trượt */
+.transition-screen {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #88d5ff;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+.transition-active {
+  animation: coverFirst 0.4s forwards ease-in;
+}
+
+@keyframes coverFirst {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes slideReset {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* ========= RESPONSIVE MOBILE (signin) ========= */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 10px;
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;       /* ❗ không còn 900px nữa */
+    max-width: 420px;
+    height: auto;
+    flex-direction: column;  /* xếp dọc: xanh trên – form dưới */
+  }
+
+  .left-panel {
+    width: 100%;
+    border-radius: 20px 20px 0 0;  /* bo trên */
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 30px 24px;
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 30px 24px 36px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+}

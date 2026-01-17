@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tài liệu</title>
+
+    <!-- Font Poppins giống các trang khác -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons (CHUYỂN TỪ DƯỚI BODY LÊN ĐÂY) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS chung toàn site -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- CSS riêng của trang tài liệu (ghi đè nếu cần) -->
+    <link rel="stylesheet" href="/assets/css/tailieu.css" />
+  </head>
+
+  <body>
+    <header class="site-frame">
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo ảnh -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="/image/trangchu/logo2.png" alt="Logo" />
+            <span class="brand-name">Lesson</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./khoahoc.html">Khóa học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./tailieu.html">Tài liệu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./gioithieu.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sukien.html">Sự kiện</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+              <a class="signin-link" href="./signin.html">Đăng nhập</a>
+              <a class="btn btn-register" href="./signup.html">Đăng kí</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ========== BANNER / HERO CAROUSEL ========== -->
+    <section class="hero-section py-3">
+      <div class="container">
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade hero-carousel"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <!-- Dots (indicator) -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="/image/trangchu/banner1.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 1"
+              />
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner2.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 2"
+              />
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner3.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 3"
+              />
+            </div>
+          </div>
+
+          <!-- Nút chuyển trái / phải -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">Trang chủ > Tài liệu</div>
+
+    <!-- Tabs + search -->
+    <section class="content-section py-4">
+      <div class="container">
+        <!-- Tabs -->
+        <ul
+          class="nav nav-pills flex-nowrap overflow-auto category-tabs mb-3"
+          id="categoryTabs"
+        >
+          <li class="nav-item">
+            <button class="nav-link active" data-category="all">
+              Tất cả tài liệu
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-category="laptrinh">Lập Trình</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-category="thietke">
+              Thiết kế đồ họa
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-category="kynangmem">
+              Kỹ năng mềm
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-category="ngoaingu">Ngoại ngữ</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-category="khac">Khác</button>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="search-wrapper mb-4">
+          <div class="input-group">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Tìm kiếm nội dung..."
+            />
+            <button class="btn btn-primary" id="searchBtn">
+              <i class="bi bi-search"></i> Tìm
+            </button>
+          </div>
+        </div>
+
+        <!-- Lưới khóa học trên -->
+        <div class="row g-3" id="courseGrid">
+          <!-- Course card 1 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh1.jpg" alt="Giới Thiệu Ngôn Ngữ " />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">Giới thiệu ngôn ngữ C</h5>
+                <p class="course-desc">
+                  Tài liệu cung cấp kiến thức nền tảng về ngôn ngữ lập trình C,
+                  giúp người mới bắt đầu nắm được cú pháp, lịch sử, tính năng và
+                  cách C hoạt động trong thực tế. Phù hợp cho người muốn học lập
+                  trình từ con số 0.
+                </p>
+                <a
+                  href="https://www.geeksforgeeks.org/c/c-language-introduction/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 2 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh2.jpg" alt="Thiết Kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-success mb-2">Thiết kế đồ họa</span>
+                <h5 class="course-title">
+                  Các thuật ngữ về màu sắc trong thiết kế đồ hoạ
+                </h5>
+                <p class="course-desc">
+                  Tài liệu giải thích rõ các thuật ngữ quan trọng về màu sắc như
+                  hue, saturation, brightness… và cách áp dụng chúng trong thiết
+                  kế. Nội dung rất hữu ích cho người mới bắt đầu hoặc muốn nâng
+                  cao khả năng phối màu.
+                </p>
+                <a
+                  href="https://colorme.vn/blog/cac-thuat-ngu-ve-mau-sac-trong-thiet-ke-do-hoa?suggestion=side-bar"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 3 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="kynangmem"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh3.jpg" alt="Kỹ năng mềm" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-primary mb-2">Kỹ năng mềm</span>
+                <h5 class="course-title">Tài liệu môn Kỹ năng mềm</h5>
+                <p class="course-desc">
+                  Tổng hợp các kiến thức cốt lõi về kỹ năng mềm: giao tiếp, làm
+                  việc nhóm, giải quyết vấn đề, tư duy phản biện… giúp sinh viên
+                  phát triển bản thân và tạo lợi thế khi làm việc trong môi
+                  trường chuyên nghiệp.
+                </p>
+                <a
+                  href="https://tailieuhust.com/tai-lieu-mon-ky-nang-mem-hust/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 4 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="ngoaingu"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh4.jpg" alt="Ngoại ngữ" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-danger mb-2">Ngoại ngữ</span>
+                <h5 class="course-title">
+                  Cấu trúc và cách dùng câu so sánh hơn và so sánh nhất
+                </h5>
+                <p class="course-desc">
+                  Tài liệu hướng dẫn chi tiết cách dùng comparative và
+                  superlative trong tiếng Anh, kèm theo ví dụ dễ hiểu, mẹo ghi
+                  nhớ và bài tập áp dụng. Phù hợp để cải thiện kỹ năng ngữ pháp
+                  nhanh chóng.
+                </p>
+                <a
+                  href="https://weset.edu.vn/blog/so-sanh-hon-va-so-sanh-nhat/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 5 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="ngoaingu"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh5.jpg" alt="Tiếng Trung" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-warning mb-2">Ngoại Ngữ</span>
+                <h5 class="course-title">
+                  9 phương pháp ghi nhớ từ vựng tiếng Trung dễ dàng
+                </h5>
+                <p class="course-desc">
+                  Tài liệu chia sẻ các phương pháp giúp ghi nhớ từ vựng hiệu quả
+                  như liên tưởng hình ảnh, phân nhóm từ, lặp lại ngắt quãng…
+                  giúp người học tự học tiếng Trung dễ dàng hơn và nhớ lâu hơn.
+                </p>
+                <a
+                  href="https://tiengtrungthuonghai.vn/tuhoctiengtrung/cac-phuong-phap-ghi-nho-tu-vung-tieng-trung-de-dang/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 6 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh6.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-secondary mb-2">Lập Trình</span>
+                <h5 class="course-title">Tài liệu hướng dẫn sử dụng SQL</h5>
+                <p class="course-desc">
+                  Tài liệu cung cấp lộ trình học SQL từ cơ bản đến nâng cao, gồm
+                  cú pháp truy vấn, các loại lệnh, thao tác với bảng và cơ sở dữ
+                  liệu. Rất hữu ích cho người học lập trình, phân tích dữ liệu
+                  hoặc IT.
+                </p>
+                <a
+                  href="https://www.geeksforgeeks.org/sql/sql-tutorial/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lưới khóa học NGOẠI NGỮ -->
+        <div class="section-divider my-4"></div>
+        <h3
+          id="ngoainguTitle"
+          class="text-center mb-3 fw-bold title-name-course"
+        >
+          NGOẠI NGỮ
+        </h3>
+
+        <div class="vstack gap-3 mb-5" id="courseList">
+          <!-- Horizontal course 1 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh7.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                10 bước tự học tiếng Trung giao tiếp cơ bản hiệu quả
+              </h5>
+              <p class="course-desc mb-3">
+                Hướng dẫn từng bước giúp người mới bắt đầu tự học tiếng Trung
+                giao tiếp, xây dựng nền tảng vững chắc và dễ ứng dụng vào đời
+                sống.
+              </p>
+              <a
+                href="https://tiengtrungthuonghai.vn/tailieuhoc/bai-3-10-buoc-tu-hoc-tieng-trung-giao-tiep-co-ban-hieu-qua/"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 2 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh8.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                60 mẫu câu giao tiếp tiếng Nhật cần biết khi đi bệnh viện
+              </h5>
+              <p class="course-desc mb-3">
+                Tổng hợp các mẫu câu tiếng Nhật quan trọng khi khám bệnh, giúp
+                bạn giao tiếp tự tin và xử lý tình huống tại bệnh viện.
+              </p>
+              <a
+                href="https://tailieuhoctiengnhat.com/60-mau-cau-giao-tiep-tieng-nhat-can-biet-khi-di-benh-vien.html"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 3 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh9.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                100 Câu Giao Tiếp Tiếng Anh Thông Dụng
+              </h5>
+              <p class="course-desc mb-3">
+                Bộ câu tiếng Anh cơ bản thường gặp trong đời sống hằng ngày, phù
+                hợp cho người học muốn cải thiện phản xạ giao tiếp nhanh.
+              </p>
+              <a
+                href="https://engbreaking.com/cau-giao-tiep-tieng-anh-thong-dung"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 4 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh10.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                200 Từ Vựng Tiếng Trung Chủ Đề Du Lịch
+              </h5>
+              <p class="course-desc mb-3">
+                Danh sách từ vựng và mẫu câu giao tiếp tiếng Trung dùng khi đi
+                du lịch, hỗ trợ bạn dễ dàng hỏi đường, đặt phòng và trò chuyện.
+              </p>
+              <a
+                href="https://tiengtrungthuonghai.vn/tu-vung-tieng-trung-chu-de-du-lich/"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 5 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh11.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                Tiếng Nhật Giao Tiếp Chủ Đề Nhà Hàng
+              </h5>
+              <p class="course-desc mb-3">
+                Tổng hợp các mẫu câu tiếng Nhật khi gọi món, đặt bàn và giao
+                tiếp trong nhà hàng, giúp bạn tự tin trong mọi tình huống.
+              </p>
+              <a
+                href="https://tailieuhoctiengnhat.com/mau-cau-giao-tiep-tieng-nhat-tai-nha-hang.html"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 6 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="ngoaingu"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh12.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Ngoại ngữ</span>
+              </div>
+              <h5 class="course-title mb-2">
+                Bộ từ vựng tiếng Trung về Gia đình kèm thành ngữ & mẫu câu giao
+                tiếp
+              </h5>
+              <p class="course-desc mb-3">
+                Bộ từ vựng tiếng Trung về gia đình kèm thành ngữ và mẫu câu thực
+                tế, phù hợp cho người học muốn mở rộng chủ đề giao tiếp.
+              </p>
+              <a
+                href="https://prepedu.com/vi/blog/tu-vung-tieng-trung-ve-gia-dinh"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Section LẬP TRÌNH -->
+        <div class="section-divider my-4"></div>
+        <h3
+          id="laptrinhTitle"
+          class="text-center mb-3 fw-bold title-name-course"
+        >
+          LẬP TRÌNH
+        </h3>
+
+        <div class="row g-3" id="courseGrid1">
+          <!-- Course card 1 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh13.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">
+                  Tài liệu Python cơ bản đến nâng cao – W3Schools
+                </h5>
+                <p class="course-desc">
+                  Lộ trình học Python trực quan từ cơ bản đến nâng cao, kèm ví
+                  dụ minh họa giúp bạn tự luyện lập trình hiệu quả.
+                </p>
+                <a
+                  href="https://www.w3schools.com/python/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 2 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh14.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">Tài liệu Java OOP – GeeksforGeeks</h5>
+                <p class="course-desc">
+                  Giải thích chi tiết các khái niệm OOP như lớp, đối tượng, kế
+                  thừa và đa hình, phù hợp cho người mới bắt đầu học Java.
+                </p>
+                <a
+                  href="https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 3 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh15.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">
+                  Tài liệu Git & GitHub cơ bản – Atlassian
+                </h5>
+                <p class="course-desc">
+                  Hướng dẫn cơ bản về Git và GitHub, giúp bạn quản lý mã nguồn
+                  và hợp tác trong dự án lập trình hiệu quả.
+                </p>
+                <a
+                  href="https://www.atlassian.com/git/tutorials"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 4 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh16.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">Tài liệu HTML – W3Schools</h5>
+                <p class="course-desc">
+                  Hướng dẫn chi tiết về HTML, giúp bạn xây dựng cấu trúc trang
+                  web một cách hiệu quả và dễ hiểu.
+                </p>
+                <a
+                  href="https://www.w3schools.com/html/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 5 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh17.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">Tài liệu CSS – MDN Web Docs</h5>
+                <p class="course-desc">
+                  Hướng dẫn chi tiết về CSS, giúp bạn tạo kiểu và bố cục cho
+                  trang web một cách chuyên nghiệp.
+                </p>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 6 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh18.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">
+                  Tài liệu JavaScript cơ bản – W3Schools
+                </h5>
+                <p class="course-desc">
+                  Giáo trình JavaScript trực quan, giúp bạn hiểu cách xử lý
+                  tương tác trên trang web và phát triển ứng dụng web cơ bản.
+                </p>
+                <a
+                  href="https://www.w3schools.com/js/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 7 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh19.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">Tài liệu SQL – GeeksforGeeks</h5>
+                <p class="course-desc">
+                  Bộ tài liệu SQL đầy đủ, hướng dẫn cách truy vấn, quản lý và xử
+                  lý dữ liệu trong các hệ quản trị cơ sở dữ liệu.
+                </p>
+                <a
+                  href="https://www.geeksforgeeks.org/sql/sql-tutorial/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 8 -->
+          <div
+            class="col-12 col-md-6 col-lg-3 course-card-wrapper"
+            data-category="laptrinh"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh20.jpg" alt="Lập trình" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Lập trình</span>
+                <h5 class="course-title">
+                  Cấu trúc dữ liệu & giải thuật – Programiz
+                </h5>
+                <p class="course-desc">
+                  Tổng hợp kiến thức về cấu trúc dữ liệu và thuật toán với minh
+                  họa rõ ràng, giúp rèn tư duy lập trình nền tảng.
+                </p>
+                <a
+                  href="https://www.programiz.com/dsa"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Section THIẾT KẾ ĐỒ HỌA -->
+        <div class="section-divider my-4"></div>
+        <h3
+          id="thietkeTitle"
+          class="text-center mb-3 fw-bold title-name-course"
+        >
+          THIẾT KẾ
+        </h3>
+
+        <div class="row g-3" id="courseGrid2">
+          <!-- Course card 1 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh21.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Thiết kế</span>
+                <h5 class="course-title">Nguyên lý thiết kế đồ họa cơ bản</h5>
+                <p class="course-desc">
+                  Giải thích chi tiết các nguyên lý thiết kế: bố cục, tương
+                  phản, cân bằng, nhịp điệu và điểm nhấn.
+                </p>
+                <a
+                  href="https://design.tutsplus.com/series/graphic-design-basics--cms-1234"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 2 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh22.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-success mb-2">Thiết kế</span>
+                <h5 class="course-title">Hướng dẫn phối màu trong thiết kế</h5>
+                <p class="course-desc">
+                  Tài liệu về lý thuyết màu sắc, bảng màu, cách phối màu hài hòa
+                  cho poster, banner, logo.
+                </p>
+                <a
+                  href="https://www.canva.com/colors/color-wheel/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 3 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh23.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-primary mb-2">Thiết kế</span>
+                <h5 class="course-title">Tài liệu Typography cơ bản</h5>
+                <p class="course-desc">
+                  Giới thiệu font, phân cấp chữ, kerning, leading, tracking —
+                  kiến thức quan trọng trong thiết kế.
+                </p>
+                <a
+                  href="https://design.tutsplus.com/series/typography-fundamentals--cms-1172"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 4 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh24.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-danger mb-2">Thiết kế</span>
+                <h5 class="course-title">Hướng dẫn sử dụng lưới bố cục</h5>
+                <p class="course-desc">
+                  Giải thích hệ thống lưới trong thiết kế website & poster giúp
+                  bố cục gọn gàng và chuyên nghiệp.
+                </p>
+                <a
+                  href="https://xd.adobe.com/ideas/principles/web-design/grid-system/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 5 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh25.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-warning mb-2">Thiết kế</span>
+                <h5 class="course-title">Cẩm nang nhận diện thương hiệu</h5>
+                <p class="course-desc">
+                  Tài liệu chi tiết về logo, màu thương hiệu, moodboard,
+                  guideline nhận diện.
+                </p>
+                <a
+                  href="https://looka.com/blog/brand-identity/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 6 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="thietke"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh26.jpg" alt="Thiết kế" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-secondary mb-2">Thiết kế</span>
+                <h5 class="course-title">
+                  Hướng dẫn thiết kế poster chuyên nghiệp
+                </h5>
+                <p class="course-desc">
+                  Mẹo thiết kế poster, quy tắc bố cục, chọn font & màu, giúp
+                  người mới tạo poster đẹp nhanh.
+                </p>
+                <a
+                  href="https://venngage.com/blog/poster-design/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lưới khóa học Kỹ năng mềm -->
+        <div class="section-divider my-4"></div>
+        <h3 id="kynangTitle" class="text-center mb-3 fw-bold title-name-course">
+          KỸ NĂNG MỀM
+        </h3>
+
+        <div class="vstack gap-3 mb-5" id="courseList1">
+          <!-- Horizontal course 1 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh27.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Kỹ năng giao tiếp hiệu quả</h5>
+              <p class="course-desc mb-3">
+                Tài liệu trình bày cách giao tiếp rõ ràng, lắng nghe chủ động và
+                xử lý bất đồng trong cuộc trò chuyện.
+              </p>
+              <a
+                href="https://www.mindtools.com/CommSkll/CommunicationSkills.htm"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 2 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh28.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge text-bg-danger mb-2">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Làm việc nhóm hiệu quả</h5>
+              <p class="course-desc mb-3">
+                Bộ tài liệu giúp cải thiện sự hợp tác, phân công công việc và
+                nâng cao hiệu suất nhóm.
+              </p>
+              <a
+                href="https://www.atlassian.com/team-playbook"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 3 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh29.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Tư duy phản biện</h5>
+              <p class="course-desc mb-3">
+                Phân tích tầm quan trọng của tư duy phản biện và cách áp dụng
+                vào giải quyết vấn đề.
+              </p>
+              <a
+                href="https://hbr.org/2020/01/why-critical-thinking-matters"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 4 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh30.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge text-bg-danger mb-2">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Quản lý thời gian</h5>
+              <p class="course-desc mb-3">
+                Giới thiệu nhiều phương pháp quản lý thời gian như Pomodoro,
+                Eisenhower, GTD.
+              </p>
+              <a
+                href="https://www.todoist.com/fr/productivity-methods"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 5 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh31.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge rounded-pill text-bg-info">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Kỹ năng đặt mục tiêu</h5>
+              <p class="course-desc mb-3">
+                Tài liệu trình bày khung SMART, cách đặt mục tiêu và theo dõi
+                tiến trình hiệu quả.
+              </p>
+              <a
+                href="https://positivepsychology.com/goal-setting/"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+
+          <!-- Horizontal course 6 -->
+          <div
+            class="course-card-wrapper course-horizontal d-flex flex-column flex-md-row align-items-stretch"
+            data-category="kynangmem"
+          >
+            <div class="course-horizontal-img">
+              <img src="/image/tailieu/anh32.jpg" />
+            </div>
+            <div class="course-horizontal-body">
+              <div class="d-flex flex-wrap align-items-center mb-2 gap-2">
+                <span class="badge text-bg-danger mb-2">Kỹ năng mềm</span>
+              </div>
+              <h5 class="course-title mb-2">Kỹ năng thuyết trình</h5>
+              <p class="course-desc mb-3">
+                Mẹo xây dựng nội dung thuyết trình và cách trình bày tự tin,
+                mạch lạc trước đám đông.
+              </p>
+              <a
+                href="https://slidebean.com/blog/presentations"
+                class="btn btn-primary btn-sm rounded-pill"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Section KHÁC -->
+        <div class="section-divider my-4"></div>
+        <h3 id="khacTitle" class="text-center mb-3 fw-bold title-name-course">
+          KHÁC
+        </h3>
+
+        <div class="row g-3" id="courseGrid3">
+          <!-- Course card 1 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh33.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-info mb-2">Khác</span>
+                <h5 class="course-title">Phương pháp học tập chủ động</h5>
+                <p class="course-desc">
+                  Trình bày các cách học chủ động giúp tăng ghi nhớ và tư duy
+                  phân tích.
+                </p>
+                <a
+                  href="https://www.educationcorner.com/active-learning/"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 2 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh34.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-success mb-2">Khác</span>
+                <h5 class="course-title">Kinh nghiệm đọc hiểu hiệu quả</h5>
+                <p class="course-desc">
+                  Tài liệu tổng hợp chiến lược đọc hiểu, đặc biệt hữu ích cho
+                  học sinh trung học.
+                </p>
+                <a
+                  href="https://www.readingrockets.org/strategies"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 3 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh35.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-primary mb-2">Khác</span>
+                <h5 class="course-title">Kỹ năng viết luận</h5>
+                <p class="course-desc">
+                  Hướng dẫn chi tiết cách viết luận, lập dàn ý, triển khai đoạn
+                  văn
+                </p>
+                <a
+                  href="http://yowl.purdue.edu/owl/general_writing/academic_writing/essay_writing/index.html"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 4 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh36.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-danger mb-2">Khác</span>
+                <h5 class="course-title">Tâm lý học đường</h5>
+                <p class="course-desc">
+                  Phân tích sức khỏe tinh thần học sinh và các yếu tố ảnh hưởng
+                  đến hiệu quả học tập.
+                </p>
+                <a
+                  href="https://www.verywellmind.com/back-to-school-psychology-5075035"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 5 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh37.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-warning mb-2">Khác</span>
+                <h5 class="course-title">
+                  Tài liệu phát triển tư duy cho học sinh
+                </h5>
+                <p class="course-desc">
+                  Tài liệu chi tiết về logo, màu thương hiệu, moodboard,
+                  guideline nhận diện.
+                </p>
+                <a
+                  href="https://www.edutopia.org/topic/student-engagement"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course card 6 -->
+          <div
+            class="col-12 col-md-6 col-lg-4 course-card-wrapper"
+            data-category="khac"
+          >
+            <div class="course-card h-100">
+              <div class="course-img">
+                <img src="/image/tailieu/anh38.jpg" alt="Khác" />
+              </div>
+              <div class="course-body">
+                <span class="badge text-bg-secondary mb-2">Khác</span>
+                <h5 class="course-title">Giáo dục STEM</h5>
+                <p class="course-desc">
+                  Tài liệu giới thiệu STEM, lợi ích và ứng dụng trong giáo dục
+                  hiện đại.
+                </p>
+                <a
+                  href="https://www.ed.gov/stem"
+                  class="btn btn-outline-primary btn-sm rounded-pill course-more"
+                >
+                  Xem thêm
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider my-5"></div>
+      </div>
+      <!-- hết .container -->
+    </section>
+    <!-- hết .content-section -->
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo + Contact -->
+          <div class="col-12 col-md-5">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <img
+                src="/image/trangchu/logo2.png"
+                alt="Lesson Logo"
+                class="footer-logo"
+              />
+              <span class="footer-name ms-2">Lesson</span>
+            </div>
+
+            <ul class="footer-contact list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill me-2"></i> 0123456789
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                duykhoi26082006@gmail.com
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Địa chỉ: 128 Lê Duẩn, Bến Thủy, TP. Vinh, Nghệ An
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-12 col-md-3">
+            <h5 class="footer-title mb-3">Tiện ích</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+              <li><a href="./tailieu.html">Tài liệu</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./sukien.html">Sự kiện</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-4">
+            <h5 class="footer-title mb-3">Kết nối với chúng tôi</h5>
+            <div class="footer-social d-flex flex-wrap gap-3">
+              <a href="#"><img src="/image/trangchu/facebook.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/tiktok.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/youtube.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/twiter.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/intagram.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/thread.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS chung toàn site (navbar, hiệu ứng chung, v.v.) -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- JS riêng cho trang tài liệu -->
+    <script src="/assets/js/tailieu.js"></script>
+  </body>
+</html>

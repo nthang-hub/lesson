@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS tách riêng -->
+    <link rel="stylesheet" href="/assets/css/signin.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Khung xanh bên trái -->
+      <div class="left-panel" id="leftPanel">
+        <a href="/index.html" class="back-arrow">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </a>
+
+        <h2>Chào mừng trở lại!</h2>
+        <p>Chưa có tài khoản?</p>
+        <button class="btn-outline" id="signupBtn">Đăng ký</button>
+      </div>
+
+      <!-- Form đăng nhập -->
+      <div class="right-panel">
+        <h1>Đăng nhập</h1>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </div>
+
+        <div class="forgot">
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+
+        <button class="btn" id="loginButton">Đăng nhập</button>
+
+        <div class="social-login">
+          <p>Hoặc đăng nhập với</p>
+          <div class="social-icons">
+            <a href="#"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+            /></a>
+            <a href="#"
+              ><img src="https://cdn-icons-png.flaticon.com/512/300/300221.png"
+            /></a>
+            <a href="#"
+              ><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hiệu ứng nền -->
+      <div class="transition-screen" id="transition"></div>
+    </div>
+
+    <!-- JS tách riêng -->
+    <script src="/assets/js/signin.js"></script>
+  </body>
+</html>

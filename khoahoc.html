@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khóa học | Lesson</title>
+
+    <!-- Font + Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/assets/css/khoahoc.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="site-frame">
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo ảnh -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="/image/trangchu/logo2.png" alt="Logo" />
+            <span class="brand-name">Lesson</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./khoahoc.html">Khóa học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./tailieu.html">Tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./gioithieu.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sukien.html">Sự kiện</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+              <a class="signin-link" href="./signin.html">Đăng nhập</a>
+              <a class="btn btn-register" href="./signup.html">Đăng kí</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Banner -->
+    <section class="banner">
+      <img src="/image/courses/banner.webp" />
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">Trang chủ > Khóa học</div>
+
+    <!-- Category -->
+    <div class="course-categories">
+      <button class="active" data-category="all">Tất cả các khóa học</button>
+      <button data-category="cntt">Lập trình & CNTT</button>
+      <button data-category="design">Thiết kế đồ họa</button>
+      <button data-category="softskill">Kỹ năng mềm</button>
+      <button data-category="language">Ngoại ngữ</button>
+      <button data-category="other">Khác</button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm nội dung..." />
+      <button><i class="fa fa-search"></i></button>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+      <button id="filterBtn">
+        <i class="fas fa-sliders-h"></i> Lọc khóa học
+      </button>
+      <div id="filterMenu" class="filter-menu">
+        <div class="filter-columns">
+          <!-- CỘT 1: TAG -->
+          <div class="filter-group">
+            <h4>Tag</h4>
+
+            <!-- Tag chi tiết CNTT / Thiết kế (tuỳ thích) -->
+            <label class="filter-option">
+              <input type="checkbox" value="html" /> HTML
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="css" /> CSS
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="javascript" /> JavaScript
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="react" /> ReactJS
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="python" /> Python
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="photoshop" /> Photoshop
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="figma" /> Figma
+            </label>
+
+            <!-- Tag tổng quát cho tất cả loại khóa -->
+            <label class="filter-option">
+              <input type="checkbox" value="laptrinh" /> Lập trình & CNTT
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="thietke" /> Thiết kế / UI-UX
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="kynangmem" /> Kỹ năng mềm
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="ngoaingu" /> Ngoại ngữ
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="marketing" /> Marketing / Kinh doanh
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="taichinh" /> Tài chính / Đầu tư
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="vanphong" /> Công cụ văn phòng
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="suckhoe" /> Sức khỏe / Yoga
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" value="video" /> Dựng video / Content
+            </label>
+          </div>
+
+          <!-- CỘT 2: CẤP ĐỘ -->
+          <div class="filter-group">
+            <h4>Cấp độ</h4>
+            <label class="filter-option"
+              ><input type="checkbox" value="beginner" /> Cơ bản</label
+            >
+            <label class="filter-option"
+              ><input type="checkbox" value="intermediate" /> Trung bình</label
+            >
+            <label class="filter-option"
+              ><input type="checkbox" value="advanced" /> Nâng cao</label
+            >
+            <label class="filter-option"
+              ><input type="checkbox" value="expert" /> Chuyên gia</label
+            >
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button class="btn-filter">Lọc</button>
+          <button class="btn-reset">Làm mới</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================== KHÓA HỌC ================== -->
+
+    <!-- LẬP TRÌNH & CNTT -->
+    <section class="course-section" data-category="cntt">
+      <div class="section-title">
+        <hr />
+        <h2 id="programmingTitle">LẬP TRÌNH VÀ CNTT</h2>
+
+        <hr />
+      </div>
+
+      <div class="course-list">
+        <!-- Card 1 - HOT: HTML/CSS -->
+        <div
+          class="course-card-new hot"
+          data-tags="html css laptrinh"
+          data-level="beginner"
+          data-topic="web"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/html-css.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> HTML/CSS Cho người mới bắt đầu - Codegym </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 136 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>cơ bản</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://nohiedu.com/html-css-cho-nguoi-moi-bat-dau-codegym/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Python -->
+        <div
+          class="course-card-new"
+          data-tags="python data laptrinh"
+          data-level="advanced"
+          data-topic="backend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/python.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Python Cơ bản đến nâng cao </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 150 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Python</span>
+              <span>Data</span>
+              <span>nâng cao</span>
+            </div>
+            <div class="course-rating">4.8</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/30-days-of-code-the-complete-python-bootcamp-vietnamese/?couponCode=CP251120G2V2"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: JavaScript -->
+        <div
+          class="course-card-new"
+          data-tags="js javascript dom es6 laptrinh"
+          data-level="intermediate"
+          data-topic="frontend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/javascript.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> JavaScript Tương tác Web </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 120 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>JS</span>
+              <span>DOM</span>
+              <span>ES6</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: ReactJS -->
+        <div
+          class="course-card-new"
+          data-tags="react hooks redux laptrinh"
+          data-level="advanced"
+          data-topic="frontend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/reactJS.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Lập trình ReactJS hiện đại </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 36 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>React</span>
+              <span>Hooks</span>
+              <span>Redux</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://edumall.medoo.io/vn/courses/nodejs-expressjs-6582baa000374edcf1c163b2"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 (ẩn): Node.js & Express -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="node express api laptrinh"
+          data-level="advanced"
+          data-topic="backend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/node-express.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Node.js & Express </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 85 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Node</span>
+              <span>API</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.aptech-danang.edu.vn/fullstack-web-reactjs-nodejs"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 (ẩn):  -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="mongodb nosql database laptrinh"
+          data-level="intermediate"
+          data-topic="backend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/sql.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Cơ sở dữ liệu và SQL </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 60 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>CSDL</span>
+              <span>SQL</span>
+            </div>
+            <div class="course-rating">4.6</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://khoahocre.com/khoa-hoc/khoa-hoc-co-so-du-lieu-va-sql-moi-nhat-2025-28tech/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 (ẩn): Git & GitHub -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="git github control laptrinh"
+          data-level="beginner"
+          data-topic="web"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/git-github.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Git & Github từ A đến Z </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 45 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/master-git-and-github-from-a-to-z-vietnamese/?couponCode=CP251120G2V2"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 (ẩn): Lập trình C++ từ cơ bản đến nâng cao -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="docker container laptrinh"
+          data-level="advanced"
+          data-topic="backend"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/c++.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Thành thạo C++ từ cơ bản đến nâng cao </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 55 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Docker</span>
+              <span>Container</span>
+            </div>
+            <div class="course-rating">4.7</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://sieuthitrithuc.com/lap-trinh-c-tu-co-ban-den-nang-cao-cung-28tech/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-more" onclick="showMore(this)">Xem thêm ></button>
+    </section>
+
+    <!-- THIẾT KẾ ĐỒ HỌA -->
+    <section class="course-section" data-category="design">
+      <div class="section-title">
+        <hr />
+        <h2 id="programmingTitle">THIẾT KẾ ĐỒ HỌA</h2>
+        <hr />
+      </div>
+      <div class="course-list">
+        <!-- Card 1 - HOT -->
+        <div
+          class="course-card-new hot"
+          data-tags="photoshop edit"
+          data-level="beginner"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/pts.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Thiết kế với Photoshop </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 56 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Photoshop</span>
+              <span>Edit</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://tuhocdohoa.vn/hoc-thiet-ke-bang-photoshop/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="course-card-new"
+          data-tags="illustrator vector"
+          data-level="beginner"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/AI-ill.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Adobe Illustrator từ cơ bản </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 98 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags"><span>AI</span><span>Vector</span></div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/thiet-ke-do-hoa-2d-chuyen-nghiep-voi-adobe-illustrator?ref=SOSANHGIAKHOAHOC"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="course-card-new"
+          data-tags="canva marketing"
+          data-level="beginner"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/canva.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Thiết kế Canva chuyên nghiệp </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 70 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Canva</span><span>Marketing</span>
+            </div>
+            <div class="course-rating">4.7</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://igrowgroup.vn/thiet-ke-canva-nang-cao/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="course-card-new"
+          data-tags="ui ux"
+          data-level="intermediate"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/uxui.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> UI/UX Design cho người mới </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 80 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags"><span>UI</span><span>UX</span></div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://colorme.vn/course/thiet-ke-ui-ux"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Cards ẩn -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="figma ui"
+          data-level="intermediate"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/figma.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Figma từ cơ bản đến nâng cao </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 75 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags"><span>Figma</span><span>UI</span></div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/khoa-hoc-figma-can-ban-by-telos/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="aftereffects motion"
+          data-level="advanced"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/motion.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Motion Graphics với After Effects </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 90 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags"><span>AE</span><span>Motion</span></div>
+            <div class="course-rating">4.8</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/hoc-motion-graphics-voi-phan-mem-after-effects/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="blender 3d"
+          data-level="advanced"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/3d.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Thiết kế 3D với Blender </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 100 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags"><span>3D</span><span>Blender</span></div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://khoahocgiahoi.com/khoa-hoc/khoa-hoc-3d-blender-co-ban-hoc-thiet-ke-3d-bang-blender-cung-ctrl-z-studio"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="premiere video"
+          data-level="intermediate"
+          data-topic="design"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/video.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Chỉnh sửa video Premiere Pro </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 65 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Premiere</span><span>Video</span>
+            </div>
+            <div class="course-rating">4.6</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/adobe-premiere-pro-cc-essentials-training-course/?im_ref=xkc0AsWrRxycTpoWvzSMFXb7UkpW6E257xWlSE0&sharedid=&irpid=1359419&utm_medium=affiliate&utm_source=impact&utm_audience=mx&utm_tactic=%22Content%22%2C%22India%22&utm_content=3193860&utm_campaign=1359419&irgwc=1&afsrc=1"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn-more" onclick="showMore(this)">Xem thêm ></button>
+    </section>
+
+    <!-- ====================== KỸ NĂNG MỀM ====================== -->
+    <section class="course-section" data-category="softskill">
+      <div class="section-title">
+        <hr />
+        <h2 id="programmingTitle">KỸ NĂNG MỀM</h2>
+
+        <hr />
+      </div>
+
+      <div class="course-list" data-category="kynangmem">
+        <!-- Card 1 - HOT -->
+        <div
+          class="course-card-new hot"
+          data-tags="giao tiep thuyet trinh"
+          data-level="all"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/giaotiep.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Kỹ Năng Giao Tiếp & Thuyết Trình Chuyên Nghiệp </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 112 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Giao tiếp</span><span>Thuyết trình</span
+              ><span>Public Speaking</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://irtc.edu.vn/1152-khoa-hoc-ky-nang-thuyet-trinh/khoa-hoc.htm"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="course-card-new"
+          data-tags="quan ly thoi gian pomodoro"
+          data-level="all"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/tg.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Quản Lý Thời Gian Hiệu Quả (Pomodoro, GTD) </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 78 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Quản lý thời gian</span><span>Pomodoro</span
+              ><span>GTD</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/bi-quyet-lam-chu-thoi-gian"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="course-card-new"
+          data-tags="lam viec nhom teamwork"
+          data-level="all"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/team.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Kỹ Năng Làm Việc Nhóm & Quản Lý Nhóm </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 95 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Teamwork</span><span>Lãnh đạo</span
+              ><span>Quản lý nhóm</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/ky-nang-lam-viec-nhom-va-xay-dung-moi-quan-he-tai-cong-so"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="course-card-new"
+          data-tags="ky nang lanh dao leadership"
+          data-level="intermediate"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/leader.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Kỹ Năng Lãnh Đạo & Quản Trị Doanh Nghiệp </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 105 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Lãnh đạo</span><span>Leadership</span><span>Quản trị</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/ky-nang-lanh-dao-va-giao-tiep-hieu-qua-trong-nghe-nhan-su"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- ==== 4 CARD ẨN (hiện khi nhấn Xem thêm) ==== -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="ky nang phan bien critical thinking"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/mind.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tư Duy Phản Biện & Giải Quyết Vấn Đề </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 88 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Critical Thinking</span><span>Problem Solving</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/tu-duy-phan-bien-giai-quyet-tan-goc-moi-van-de"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="ky nang dam phan negotiation"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/damphan.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Kỹ Năng Đàm Phán & Thuyết Phục </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 76 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Đàm phán</span><span>Thuyết phục</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/ky-nang-dam-phan-va-thuyet-phuc"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="emotional intelligence eq"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/eq.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Trí Tuệ Cảm Xúc EQ Trong Công Việc </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 82 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>EQ</span><span>Cảm xúc</span><span>Tự kiểm soát</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/quan-tri-cam-xuc"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="ky nang ban hang sales"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/cskh.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Kỹ Năng Bán Hàng & Chăm Sóc Khách Hàng </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 98 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Bán hàng</span><span>CSKH</span><span>Sales</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/ky-nang-ban-hang-face-to-face"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-more" onclick="showMore(this)">Xem thêm ></button>
+    </section>
+    <!-- ====================== NGOẠI NGỮ ====================== -->
+    <section class="course-section" data-category="language">
+      <div class="section-title">
+        <hr />
+        <h2 id="programmingTitle">NGOẠI NGỮ</h2>
+
+        <hr />
+      </div>
+
+      <div class="course-list" data-category="ngoaingu">
+        <!-- Card 1 - HOT -->
+        <div
+          class="course-card-new hot"
+          data-tags="tienganh giao tiep phat am"
+          data-level="beginner"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/ta.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Anh Giao Tiếp Từ Con Số 0 </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 180 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Anh</span><span>Giao tiếp</span><span>Phát âm</span
+              ><span>A1-A2</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://langmaster.edu.vn/khoa-hoc-ielts-foundation-3-0"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="course-card-new"
+          data-tags="tiengnhat n5 hiragana"
+          data-level="beginner"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/jp.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Nhật N5 – Từ A Đến Z </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 145 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Nhật</span><span>N5</span><span>Hiragana</span
+              ><span>Kanji cơ bản</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://dekiru.vn/study-route/5"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="course-card-new"
+          data-tags="ielts writing speaking"
+          data-level="advanced"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/ei.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> IELTS 7.0+ Band (Full 4 kỹ năng) </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 200 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>IELTS</span><span>Writing Task 2</span><span>Speaking</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://vietop.edu.vn/khoa-hoc/khoa-hoc-ielts-7-0/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="course-card-new"
+          data-tags="tienghan topik hangul"
+          data-level="beginner"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/korea.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Hàn TOPIK I (Cấp 1-2) </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 160 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Hàn</span><span>TOPIK</span><span>Hangul</span
+              ><span>Ngữ pháp</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://trungtamtienghan.edu.vn/khoa-hoc/tieng-han-topik-1/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- === 4 CARD ẨN (hiện khi nhấn Xem thêm) === -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="toeic listening reading"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/toeic.avif')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> TOEIC 800+ – Luyện Thi </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 165 bài</span
+              ><span><i class="fas fa-infinity"></i>Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>TOEIC</span><span>Listening</span><span>Reading</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://ngoaingu24h.vn/khoa-hoc/luyen-thi-toeic-nghe-doc-cap-toc-muc-tieu-700-850-2026-5656821580693504"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="tiengtrung hsk pinyin"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/hsk3.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Trung HSK 3 Thực Chiến </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 130 bài</span
+              ><span><i class="fas fa-infinity"></i>Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Trung</span><span>HSK3</span><span>Pinyin</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/ky-nang-ban-hang-face-to-face"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="tiengphap delf a1 a2"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/phap.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Pháp DELF A1-A2 </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 115 bài</span
+              ><span><i class="fas fa-infinity"></i>Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Pháp</span><span>DELF</span><span>Ngữ pháp</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://capfrance.edu.vn/khoa-tieng-phap/khoa-tieng-phap-a2.html"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="tiengduc goethe a1"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/duc.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tiếng Đức A1-A2 (Goethe) </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 125 bài</span
+              ><span><i class="fas fa-infinity"></i>Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tiếng Đức</span><span>Goethe</span><span>Ngữ pháp</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.goethe.de/ins/vn/vi/spr/kur/onk.html"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-more" onclick="showMore(this)">Xem thêm ></button>
+    </section>
+
+    <!-- ====================== KHÁC ====================== -->
+    <section class="course-section" data-category="other">
+      <div class="section-title">
+        <hr />
+        <h2 id="programmingTitle">KHÁC</h2>
+
+        <hr />
+      </div>
+
+      <div class="course-list" data-category="khac">
+        <!-- Card 1 - HOT -->
+        <div class="course-card-new hot" data-tags="figma ui ux design">
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/figma-uxui.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Thiết Kế UI/UX Figma Từ A-Z 2025 </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 128 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Figma</span><span>UI/UX</span><span>Thiết kế</span
+              ><span>Prototype</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://keyframe.vn/khoa-hoc-offline/khoa-hoc-figma-ui-design-80.html"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="course-card-new" data-tags="marketing facebook tiktok ads">
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/ads.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Marketing Online Facebook & TikTok Ads </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 145 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Facebook Ads</span><span>TikTok Ads</span
+              ><span>Chạy quảng cáo</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://datba.vn/learn"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="course-card-new" data-tags="taichinh danhan dau tu">
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/tcdt.png')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Tài Chính Cá Nhân & Đầu Tư Cho Người Mới </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 98 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Tài chính cá nhân</span><span>Đầu tư</span
+              ><span>Chứng khoán</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://www.udemy.com/course/tai-chinh-ca-nhan/?couponCode=CP251129CMG2"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="course-card-new" data-tags="canva thietke photoshop">
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/canvapts.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Canva + Photoshop Cơ Bản Đến Nâng Cao </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 115 bài giảng</span>
+              <span><i class="fas fa-infinity"></i> Sở hữu trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Canva</span><span>Photoshop</span
+              ><span>Thiết kế đồ họa</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://canva.edu.vn/khoa-hoc-thiet-ke-canva-tu-co-ban-den-nang-cao/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- ==== 4 CARD ẨN (hiện khi nhấn Xem thêm) ==== -->
+        <div
+          class="course-card-new hidden-course"
+          data-tags="yoga suc khoe mindfulness"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/yoga.webp')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Yoga & Thiền Mỗi Ngày Cho Người Mới </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 90 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Yoga</span><span>Thiền</span><span>Sức khỏe</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://yogadaily.com.vn/tin-tuc/lop-yoga-co-ban-cho-nguoi-moi"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="powerpoint thuyet trinh"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/ppt.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> PowerPoint Thiết Kế Slide Đẹp Như Pro </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 82 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>PowerPoint</span><span>Thiết kế slide</span
+              ><span>Thuyết trình</span>
+            </div>
+            <div class="course-rating">4.9</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://thietkepowerpoint.gitiho.com/"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="excel nangcao vba"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/ex.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Excel Nâng Cao + VBA Tự Động Hóa </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 135 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>Excel</span><span>VBA</span><span>Tự động hóa</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://unica.vn/vba-excel-toan-tap-tu-co-ban-den-nang-cao"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="course-card-new hidden-course"
+          data-tags="video editing premiere capcut"
+        >
+          <div
+            class="course-bg"
+            style="background-image: url('./image/courses/capcut.jpg')"
+          ></div>
+          <div class="course-overlay">
+            <h3>
+              <a> Dựng Phim TikTok/YouTube Bằng CapCut & Premiere </a>
+            </h3>
+            <div class="course-info">
+              <span><i class="fas fa-play-circle"></i> 120 bài</span
+              ><span><i class="fas fa-infinity"></i> Trọn đời</span>
+            </div>
+            <div class="course-tags">
+              <span>CapCut</span><span>Premiere</span><span>Video editing</span>
+            </div>
+            <div class="course-rating">5.0</div>
+            <div class="course-actions">
+              <a
+                class="btn-detail"
+                href="https://keyframe.vn/khoa-hoc-offline/khoa-hoc-dung-phim-capcut-social-video-editing-91.html"
+                target="_blank"
+                >Xem chi tiết</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-more" onclick="showMore(this)">Xem thêm ></button>
+    </section>
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo + Contact -->
+          <div class="col-12 col-md-5">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <img
+                src="/image/trangchu/logo2.png"
+                alt="Lesson Logo"
+                class="footer-logo"
+              />
+              <span class="footer-name ms-2">Lesson</span>
+            </div>
+
+            <ul class="footer-contact list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill me-2"></i> 0123456789
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                duykhoi26082006@gmail.com
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Địa chỉ: 128 Lê Duẩn, Bến Thủy, TP. Vinh, Nghệ An
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-12 col-md-3">
+            <h5 class="footer-title mb-3">Tiện ích</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+              <li><a href="./tailieu.html">Tài liệu</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./sukien.html">Sự kiện</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-4">
+            <h5 class="footer-title mb-3">Kết nối với chúng tôi</h5>
+            <div class="footer-social d-flex flex-wrap gap-3">
+              <a href="#"><img src="/image/trangchu/facebook.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/tiktok.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/youtube.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/twiter.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/intagram.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/thread.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/assets/js/khoahoc.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

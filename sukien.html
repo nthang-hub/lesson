@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sự kiện</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS chung toàn site -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="/assets/css/sukien.css" />
+  </head>
+
+  <body>
+    <header class="site-frame">
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo ảnh -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="/image/trangchu/logo2.png" alt="Logo" />
+            <span class="brand-name">Lesson</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./khoahoc.html">Khóa học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./tailieu.html">Tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./gioithieu.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./sukien.html">Sự kiện</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+              <a class="signin-link" href="./signin.html">Đăng nhập</a>
+              <a class="btn btn-register" href="./signup.html">Đăng kí</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== BANNER / HERO CAROUSEL ========== -->
+    <section class="hero-section py-3">
+      <div class="container">
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade hero-carousel"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <!-- Dots (indicator) -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="/image/trangchu/banner1.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 1"
+              />
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner2.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 2"
+              />
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner3.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 3"
+              />
+            </div>
+          </div>
+
+          <!-- Nút chuyển trái / phải -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== 3 BANNER MINI ==== -->
+    <section class="top-sale-banners py-4">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="sale-card">
+              <img src="/image/sukien/anh1.jpg" alt="Big Sale" class="w-100" />
+              <div class="sale-card-overlay">
+                <p class="sale-label">BIG SALE</p>
+                <p class="sale-text">Ưu đãi lên đến 50% cho khóa học IT</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="sale-card">
+              <img
+                src="/image/sukien/anh2.jpg"
+                alt="Cuối tháng sale"
+                class="w-100"
+              />
+              <div class="sale-card-overlay">
+                <p class="sale-label">FLASH SALE</p>
+                <p class="sale-text">Giảm sốc 24h cuối tháng</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="sale-card">
+              <img
+                src="/image/sukien/anh3.jpg"
+                alt="Shop xin sale"
+                class="w-100"
+              />
+              <div class="sale-card-overlay">
+                <p class="sale-label">WORKSHOP ONLINE</p>
+                <p class="sale-text">Miễn phí tham dự, nhận tài liệu PDF</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==== KHỐI NỘI DUNG CHÍNH ==== -->
+    <section class="events-main pb-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- ========== Bên Trái: SỰ KIỆN NỔI BẬT ========== -->
+          <div class="col-lg-8">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="section-title mb-0" id="eventsHighlight">
+                Sự kiện nổi bật
+              </h2>
+
+              <div class="d-none d-md-flex align-items-center gap-2">
+                <span class="filter-label me-1">Lọc nhanh:</span>
+                <button
+                  class="btn btn-sm btn-outline-secondary active filter-btn"
+                  data-filter="all"
+                >
+                  Tất cả
+                </button>
+                <button
+                  class="btn btn-sm btn-outline-secondary filter-btn"
+                  data-filter="online"
+                >
+                  Online
+                </button>
+                <button
+                  class="btn btn-sm btn-outline-secondary filter-btn"
+                  data-filter="offline"
+                >
+                  Offline
+                </button>
+              </div>
+            </div>
+
+            <p class="text-muted small mb-3">
+              Lịch sự kiện, workshop, talkshow dành cho học sinh – sinh viên yêu
+              thích công nghệ, thiết kế và kỹ năng mềm.
+            </p>
+
+            <!-- LIST SỰ KIỆN: HTML TĨNH, JS CHỈ ẨN/HIỆN & PHÂN TRANG -->
+            <div class="row g-3" id="eventList">
+              <!-- Event 1 -->
+              <div class="col-12 event-card-wrapper" data-mode="online">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh4.jpg"
+                      alt="Workshop: Lộ trình Frontend Developer từ A–Z"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category laptrinh">
+                        <i class="bi bi-tag-fill me-1"></i>Lập trình &amp; CNTT
+                      </span>
+                      <span class="event-status upcoming">Sắp diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Workshop: Lộ trình Frontend Developer từ A–Z
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i
+                        >20/12/2025</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>19:30 - 21:30</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Zoom Meeting</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Online</span>
+                    </div>
+                    <p class="event-desc">
+                      Giải đáp thắc mắc về cách bắt đầu học HTML, CSS,
+                      JavaScript cho người mới.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Nguyễn Văn Anh –
+                        Frontend Dev tại ABC
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 2 -->
+              <div class="col-12 event-card-wrapper" data-mode="offline">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh5.jpg"
+                      alt="Talkshow: Hành trình trở thành UI/UX Designer"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category thietke">
+                        <i class="bi bi-tag-fill me-1"></i>Thiết kế đồ họa
+                      </span>
+                      <span class="event-status upcoming">Sắp diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Talkshow: Hành trình trở thành người dùng AI chuyên nghiệp
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i
+                        >23/12/2025</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>8:30 - 11:00</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Hội trường A – ĐH
+                        Vinh</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Offline</span>
+                    </div>
+                    <p class="event-desc">
+                      Chia sẻ kinh nghiệm thực tế, portfolio và phỏng vấn vị trí
+                      thiết kế sản phẩm.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Trần Thị Bình –
+                        Senior UX Designer
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 3 -->
+              <div class="col-12 event-card-wrapper" data-mode="online">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh6.jpg"
+                      alt="Mini game: Thử thách kiến thức Python cơ bản"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category ngoaingu">
+                        <i class="bi bi-tag-fill me-1"></i>Ngoại ngữ &amp; Tiếng
+                        Nhật
+                      </span>
+                      <span class="event-status ongoing">Đang diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Ưu đãi khóa học tiếng Nhật 5 phần
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i>Hôm nay</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>19:00 - 20:00</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Discord Server</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Online</span>
+                    </div>
+                    <p class="event-desc">
+                      Tham gia mini game, làm quiz và nhận voucher khóa học.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Language Mentor
+                        Team
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 4 -->
+              <div class="col-12 event-card-wrapper" data-mode="offline">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh7.jpg"
+                      alt="Workshop: Kỹ năng thuyết trình cho sinh viên CNTT"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category kynang">
+                        <i class="bi bi-tag-fill me-1"></i>Kỹ năng mềm
+                      </span>
+                      <span class="event-status upcoming">Sắp diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Workshop: Kỹ năng thuyết trình cho sinh viên CNTT
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i
+                        >05/01/2026</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>14:00 - 16:30</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Phòng Lab 2 – ĐH
+                        Vinh</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Offline</span>
+                    </div>
+                    <p class="event-desc">
+                      Luyện tập thuyết trình trước lớp, trình bày slide logic và
+                      tự tin hơn.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>ThS. Lê Minh Đức
+                        – Giảng viên Kỹ năng mềm
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 5 -->
+              <div class="col-12 event-card-wrapper" data-mode="online">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh5.jpg"
+                      alt="Webinar: Ôn thi TOEIC 650+ cho người mất gốc"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category ngoaingu">
+                        <i class="bi bi-tag-fill me-1"></i>Ngoại ngữ
+                      </span>
+                      <span class="event-status upcoming">Sắp diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Webinar: Ôn thi TOEIC 650+ cho người mất gốc
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i
+                        >10/01/2026</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>19:30 - 21:00</span>
+                      <span><i class="bi bi-geo-alt me-1"></i>Google Meet</span>
+                      <span><i class="bi bi-wifi me-1"></i>Online</span>
+                    </div>
+                    <p class="event-desc">
+                      Chiến lược làm bài Listening &amp; Reading, chia sẻ bộ đề
+                      hay.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Cô Lan – Giảng
+                        viên TOEIC
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 6 -->
+              <div class="col-12 event-card-wrapper" data-mode="offline">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh8.jpg"
+                      alt="Talkshow: Kinh nghiệm thực tập tại doanh nghiệp IT"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category laptrinh">
+                        <i class="bi bi-tag-fill me-1"></i>Lập trình &amp; CNTT
+                      </span>
+                      <span class="event-status finished">Đã diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Talkshow: Kinh nghiệm thực tập tại doanh nghiệp IT
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i>Tháng
+                        11/2025</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>8:00 - 10:30</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Phòng Hội thảo – ĐH
+                        Vinh</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Offline</span>
+                    </div>
+                    <p class="event-desc">
+                      Giao lưu chia sẻ hành trình xin thực tập, phỏng vấn và kỹ
+                      năng làm việc.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Cựu sinh viên K64
+                        CNTT
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 7 -->
+              <div class="col-12 event-card-wrapper" data-mode="online">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh9.jpg"
+                      alt="Online Meetup: Hỏi đáp về ngành Data Analyst"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category laptrinh">
+                        <i class="bi bi-tag-fill me-1"></i>Lập trình &amp; CNTT
+                      </span>
+                      <span class="event-status upcoming">Sắp diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Online Meetup: Hỏi đáp về ngành Data Analyst
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i
+                        >15/01/2026</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>20:00 - 21:30</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Zoom Webinar</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Online</span>
+                    </div>
+                    <p class="event-desc">
+                      Tìm hiểu lộ trình, công việc hàng ngày và kỹ năng cần có
+                      cho Data.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Nguyễn Quốc Huy –
+                        Data Analyst
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Event 8 -->
+              <div class="col-12 event-card-wrapper" data-mode="offline">
+                <article class="event-card">
+                  <div class="event-thumb">
+                    <img
+                      src="/image/sukien/anh10.jpg"
+                      alt="Workshop: Thiết kế Poster sự kiện bằng Canva"
+                    />
+                  </div>
+                  <div class="event-body">
+                    <div class="event-topline">
+                      <span class="event-category thietke">
+                        <i class="bi bi-tag-fill me-1"></i>Thiết kế đồ họa
+                      </span>
+                      <span class="event-status finished">Đã diễn ra</span>
+                    </div>
+                    <h3 class="event-title">
+                      Workshop: Thiết kế Poster sự kiện bằng Canva
+                    </h3>
+                    <div class="event-meta">
+                      <span
+                        ><i class="bi bi-calendar-event me-1"></i>Tháng
+                        10/2025</span
+                      >
+                      <span><i class="bi bi-clock me-1"></i>13:30 - 16:00</span>
+                      <span
+                        ><i class="bi bi-geo-alt me-1"></i>Phòng Studio – ĐH
+                        Vinh</span
+                      >
+                      <span><i class="bi bi-wifi me-1"></i>Offline</span>
+                    </div>
+                    <p class="event-desc">
+                      Thực hành thiết kế poster từ A–Z, xuất file in ấn và đăng
+                      mạng xã hội.
+                    </p>
+                    <div class="event-footer">
+                      <span class="event-speaker">
+                        <i class="bi bi-person-badge me-1"></i>Team Design
+                        CodeZone
+                      </span>
+                      <div class="event-actions">
+                        <button class="btn btn-outline-primary btn-sm">
+                          Xem chi tiết
+                        </button>
+                        <button class="btn btn-primary btn-sm ms-1">
+                          Đăng ký ngay
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- PHÂN TRANG -->
+            <nav aria-label="Event pagination" class="pagination-wrapper mt-4">
+              <ul
+                class="pagination justify-content-center mb-0"
+                id="eventPagination"
+              >
+                <!-- JS sẽ thêm nút 1,2,... -->
+              </ul>
+            </nav>
+          </div>
+
+          <!-- ========== RIGHT: SIDEBAR ========== -->
+          <div class="col-lg-4">
+            <!-- Có thể bạn quan tâm -->
+            <aside class="sidebar-box mb-4">
+              <h3 class="sidebar-title">Có thể bạn quan tâm</h3>
+              <div class="sidebar-list" id="relatedEvents">
+                <!-- Item 1 -->
+                <a href="#" class="related-item d-flex">
+                  <div class="related-thumb">
+                    <img
+                      src="/image/sukien/anh4.jpg"
+                      alt="Chiến lược IT 2025"
+                    />
+                  </div>
+                  <div class="related-body">
+                    <p class="related-title mb-1">
+                      Chiến lược học lập trình Web cho người mới
+                    </p>
+                    <p class="related-meta mb-0">
+                      <i class="bi bi-calendar-event me-1"></i>
+                      20/12 · Online
+                    </p>
+                  </div>
+                </a>
+
+                <!-- Item 2 -->
+                <a href="#" class="related-item d-flex">
+                  <div class="related-thumb">
+                    <img src="/image/sukien/canva.jpg" alt="Thiết kế Canva" />
+                  </div>
+                  <div class="related-body">
+                    <p class="related-title mb-1">
+                      Workshop: Thiết kế banner bằng Canva
+                    </p>
+                    <p class="related-meta mb-0">
+                      <i class="bi bi-geo-alt me-1"></i>
+                      TP. Vinh · Offline
+                    </p>
+                  </div>
+                </a>
+
+                <!-- Item 3 -->
+                <a href="#" class="related-item d-flex">
+                  <div class="related-thumb">
+                    <img src="/image/sukien/talk01.jpg" alt="Kỹ năng mềm" />
+                  </div>
+                  <div class="related-body">
+                    <p class="related-title mb-1">
+                      Talkshow: Kỹ năng mềm cho sinh viên CNTT
+                    </p>
+                    <p class="related-meta mb-0">
+                      <i class="bi bi-calendar-event me-1"></i>
+                      05/01 · Online
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </aside>
+
+            <!-- Kết nối với chúng tôi -->
+            <aside class="sidebar-box mb-4">
+              <h3 class="sidebar-title">Kết nối với chúng tôi</h3>
+              <p class="mb-3 small text-muted">
+                Theo dõi để không bỏ lỡ các ưu đãi và sự kiện mới nhất.
+              </p>
+              <div class="social-list d-flex flex-wrap gap-2">
+                <a href="#" class="social-item facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" class="social-item youtube">
+                  <i class="bi bi-youtube"></i>
+                </a>
+                <a href="#" class="social-item tiktok">
+                  <i class="bi bi-tiktok"></i>
+                </a>
+                <a href="#" class="social-item instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-item twitter">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </div>
+            </aside>
+
+            <!-- Banner SALE bên phải -->
+            <aside class="sidebar-box p-0" id="saleBanner">
+              <img
+                src="/image/sukien/banner01.jpg"
+                alt="Super Sale"
+                class="w-100 rounded-3"
+              />
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo + Contact -->
+          <div class="col-12 col-md-5">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <img
+                src="/image/trangchu/logo2.png"
+                alt="Lesson Logo"
+                class="footer-logo"
+              />
+              <span class="footer-name ms-2">Lesson</span>
+            </div>
+
+            <ul class="footer-contact list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill me-2"></i>
+                0123456789
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                duykhoi26082006@gmail.com
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Địa chỉ: 128 Lê Duẩn, Bến Thủy, TP. Vinh, Nghệ An
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-12 col-md-3">
+            <h5 class="footer-title mb-3">Tiện ích</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href=".khoahoc.html">Khóa học</a></li>
+              <li><a href="./tailieu.html">Tài liệu</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./sukien.html">Sự kiện</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-4">
+            <h5 class="footer-title mb-3">Kết nối với chúng tôi</h5>
+            <div class="footer-social d-flex flex-wrap gap-3">
+              <a href="#">
+                <img src="/image/trangchu/facebook.jpg" alt="" />
+              </a>
+              <a href="#">
+                <img src="/image/trangchu/tiktok.jpg" alt="" />
+              </a>
+              <a href="#">
+                <img src="/image/trangchu/youtube.jpg" alt="" />
+              </a>
+              <a href="#">
+                <img src="/image/trangchu/twiter.jpg" alt="" />
+              </a>
+              <a href="#">
+                <img src="/image/trangchu/intagram.jpg" alt="" />
+              </a>
+              <a href="#">
+                <img src="/image/trangchu/thread.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- NÚT LÊN ĐẦU TRANG -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Lên đầu trang">
+      <i class="bi bi-chevron-up"></i>
+    </button>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS chung toàn site (navbar, hiệu ứng chung, v.v.) -->
+    <script src="/assets/js/script.js"></script>
+
+    <!-- JS riêng của trang -->
+    <script src="/assets/js/sukien.js"></script>
+  </body>
+</html>

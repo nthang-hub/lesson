@@ -1,0 +1,700 @@
+/* Khung ngoài giống border đen */
+.site-frame {
+  border: 2px solid #fff0f0;
+  background: #fff0f0;
+  position: sticky; /* hoặc fixed, nhưng sticky mượt hơn */
+  top: 0;
+  z-index: 1050; /* nằm trên banner và các phần khác */
+}
+
+/* Navbar chính */
+.main-navbar {
+  padding: 14px 0;
+}
+
+/* Logo: chứa icon + chữ thương hiệu */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo image */
+.navbar-brand img {
+  max-height: 38px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Chữ thương hiệu */
+.brand-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 0.3px;
+}
+
+/* Menu navbar */
+.navbar-nav {
+  gap: 22px;
+}
+
+.nav-link {
+  color: #111 !important;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+/* Đăng ký */
+.btn-register {
+  background: #39a8d6;
+  border-color: #39a8d6;
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 18px;
+  font-weight: 600;
+}
+
+/* Đăng nhập */
+.signin-link {
+  color: #222;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Hiệu ứng khi trang đăng nhập/kí được chọn */
+.nav-link.active {
+  background: #f7d879;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 20px !important;
+  color: #111 !important;
+}
+
+@media (max-width: 767.98px) {
+  .nav-link {
+    font-size: 16px;
+    padding: 8px 6px;
+  }
+
+  /*đồng bộ với max-height bên trên */
+  .navbar-brand img {
+    max-height: 32px;
+  }
+
+  .brand-name {
+    font-size: 18px;
+  }
+}
+
+/* ====== BANNER ====== */
+.hero-carousel {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.hero-img {
+  height: 420px
+  object-fit: cover;
+}
+
+/* Dots */
+.hero-carousel .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.hero-carousel .carousel-indicators .active {
+  background-color: #00a8ff;
+}
+
+/* Mũi tên có bóng nhẹ */
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Responsive banner nhỏ lại trên mobile */
+@media (max-width: 767.98px) {
+  .hero-img {
+    height: 260px;
+  }
+}
+
+/* ===== SỰ KIỆN NỔI BẬT ===== */
+
+/* Tiêu đề section chung */
+.section-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 28px;
+  position: relative;
+  line-height: 1.25;
+  color: #111;
+}
+
+.featured-events {
+  margin-top: 50px;
+}
+
+/* Gạch nhấn dưới chữ */
+.section-heading::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  background: #00a8ff;
+  display: block;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 26px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00a8ff;
+  margin: 8px auto 0;
+  border-radius: 6px;
+}
+
+/* Event Card */
+.event-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.event-img img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 18px 20px 22px;
+}
+
+.event-content h5 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.event-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Button */
+.btn-event {
+  display: inline-block;
+  background: #00a8ff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-event:hover {
+  background: #007bb8;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .event-img img {
+    height: 160px;
+  }
+}
+
+/* ===== TIÊU ĐỀ CHUNG ===== */
+.section-heading {
+  font-weight: 700;
+  font-size: 26px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: #00a8ff;
+  display: block;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+/* ===== COURSE CARD ===== */
+.course-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.course-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.course-body {
+  padding: 18px 20px 22px;
+}
+
+.course-body h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.course-info {
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.course-rating {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.course-rating::before {
+  content: "★★★★★";
+  font-size: 16px;
+}
+
+/* Button */
+.btn-course {
+  display: inline-block;
+  background: #39a8d6;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-course:hover {
+  background: #1f7cab;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 575.98px) {
+  .course-img {
+    height: 150px;
+  }
+  .course-body h5 {
+    font-size: 14px;
+  }
+  .course-info {
+    font-size: 12px;
+  }
+}
+
+/* ===== TÀI LIỆU NỔI BẬT ===== */
+
+/* Tiêu đề căn giữa, có gạch hai bên */
+.docs-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.docs-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.docs-title-line {
+  flex: 1;
+  height: 1px;
+  background: #222;
+  max-width: 220px;
+}
+
+/* Card tài liệu */
+.doc-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.doc-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.doc-body {
+  padding: 16px 18px 20px;
+}
+
+.doc-body h5 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.doc-body p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+/* Tag “cơ bản / CSS / 30 trang” */
+.doc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.doc-tags span {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef5ff;
+  color: #2563eb;
+}
+
+/* Nút Xem thêm... */
+.btn-doc {
+  display: inline-block;
+  background: #4753ff;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-doc:hover {
+  background: #2f3acb;
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .docs-title {
+    font-size: 22px;
+  }
+  .doc-img {
+    height: 160px;
+  }
+}
+
+/* ===== SECTION HỌC VIÊN NÓI GÌ VỀ CHÚNG TÔI ===== */
+.testimonials-section {
+  background: #ffffff;
+  padding: 70px 0 80px;
+}
+
+.testimonials-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+/* Card */
+.testimonial-card {
+  background: #d7eaf0;
+  border-radius: 24px;
+  padding: 32px 30px 26px;
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.06);
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.quote-icon {
+  font-size: 30px;
+  color: #3366ff;
+  margin-bottom: 12px;
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 26px;
+}
+
+/* Info dưới cùng */
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-info h6 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.student-info small {
+  color: #7e8bb6;
+}
+
+.student-info img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Dots*/
+.testimonial-dots {
+  position: static;
+  margin-top: 32px;
+}
+
+.testimonial-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #c3c7e6;
+  border: none;
+}
+
+.testimonial-dots .active {
+  background-color: #3366ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials-title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .testimonial-card {
+    padding: 24px 20px 22px;
+  }
+}
+
+/* ========== FOOTER ========== */
+.footer-section {
+  background: #ffffff;
+  border-top: 6px solid #00a8ff;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* Logo + tên brand */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  height: 42px;
+  width: auto;
+}
+
+.footer-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Tiêu đề cột (Liên hệ / Tiện ích / Kết nối...) */
+.footer-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Text liên hệ + menu */
+.footer-contact li,
+.footer-links li {
+  font-size: 15px;
+  color: #222;
+}
+
+/* Link trong cột Tiện ích */
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #222;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #00a8ff;
+}
+
+/* ========== SOCIAL ICONS ========== */
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 260px;
+}
+
+.footer-social a {
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  justify-content: center;
+}
+
+/* Icon to hơn, bo tròn */
+.footer-social img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.25s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.15);
+}
+
+/* ========== RESPONSIVE FOOTER ========== */
+@media (max-width: 575.98px) {
+  .footer-section {
+    text-align: left;
+  }
+
+  .footer-brand {
+    justify-content: flex-start;
+  }
+
+  .footer-social {
+    margin-top: 12px;
+  }
+
+  .footer-section .col-6 {
+    margin-top: 16px;
+  }
+}
+
+/* ====== LỢI ÍCH NỔI BẬT ====== */
+
+.benefits-section {
+  background: #ffffff;
+}
+
+.benefits-title {
+  font-size: 1.9rem;
+}
+
+.benefits-subtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+}
+
+/* Card lợi ích */
+.benefit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 18px 22px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+/* Icon tròn */
+.benefit-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #6366f1, #22c1c3);
+  color: #ffffff;
+  font-size: 1.7rem;
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.4);
+}
+
+.benefit-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.benefit-desc {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 0;
+}
+
+/* Hover effect */
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  border-color: #6366f1;
+}
+
+/* Responsive nhẹ cho mobile */
+@media (max-width: 576px) {
+  .benefits-title {
+    font-size: 1.4rem;
+  }
+
+  .benefit-card {
+    padding: 20px 14px;
+  }
+}

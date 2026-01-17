@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Header Demo</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-frame">
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo ảnh -->
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/image/trangchu/logo2.png" alt="Logo" />
+            <span class="brand-name">Lesson</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./khoahoc.html">Khóa học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./tailieu.html">Tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./gioithieu.html">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sukien.html">Sự kiện</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+              <a class="signin-link" href="./signin.html">Đăng nhập</a>
+              <a class="btn btn-register" href="./signup.html">Đăng kí</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== BANNER / HERO CAROUSEL ========== -->
+    <section class="hero-section py-3">
+      <div class="container">
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade hero-carousel"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <!-- Dots (indicator) -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img
+                src="/image/trangchu/banner5.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 1"
+              />
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner2.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 2"
+              />
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img
+                src="/image/trangchu/banner3.jpg"
+                class="d-block w-100 hero-img"
+                alt="Banner 3"
+              />
+            </div>
+          </div>
+
+          <!-- Nút chuyển trái / phải -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SỰ KIỆN NỔI BẬT ========== -->
+    <section class="featured-courses py-5">
+      <div class="container">
+        <h2 class="section-heading">Sự kiện nổi bật</h2>
+        <div class="row g-4">
+          <!-- Event 1 -->
+          <div class="col-md-4">
+            <div class="event-card">
+              <div class="event-img">
+                <img src="/image/trangchu/sukien1.jpg" alt="Sự kiện 1" />
+              </div>
+              <div class="event-content">
+                <h5>Khóa học Online miễn phí</h5>
+                <p>
+                  Tham gia ngay để trải nghiệm lớp học tương tác và tài liệu
+                  thực hành.
+                </p>
+                <a href="#" class="btn-event">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="col-md-4">
+            <div class="event-card">
+              <div class="event-img">
+                <img src="/image/trangchu/sukien2.jpg" alt="Sự kiện 2" />
+              </div>
+              <div class="event-content">
+                <h5>Workshop định hướng Digital</h5>
+                <p>Gặp gỡ chuyên gia, cập nhật xu hướng truyền thông 2025.</p>
+                <a href="#" class="btn-event">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="col-md-4">
+            <div class="event-card">
+              <div class="event-img">
+                <img src="/image/trangchu/sukien3.jpg" alt="Sự kiện 3" />
+              </div>
+              <div class="event-content">
+                <h5>Hội thảo kỹ năng mềm</h5>
+                <p>
+                  Rèn luyện tư duy phản biện và kỹ năng giao tiếp chuyên nghiệp.
+                </p>
+                <a href="#" class="btn-event">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== KHÓA HỌC NỔI BẬT ========== -->
+    <section class="featured-courses py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">Khóa học nổi bật</h2>
+
+        <div class="row g-4">
+          <!-- Course 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="course-card">
+              <img
+                src="/image/trangchu/sanpham1.jpg"
+                alt="Khóa học 1"
+                class="course-img"
+              />
+              <div class="course-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+
+                <div class="course-info">
+                  <span>128 bài học</span>
+                  <span>50.234 học viên</span>
+                </div>
+
+                <div class="course-rating">4.9</div>
+
+                <a href="#" class="btn-course">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="course-card">
+              <img
+                src="/image/trangchu/sanpham2.jpg"
+                alt="Khóa học 2"
+                class="course-img"
+              />
+              <div class="course-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="course-info">
+                  <span>128 bài học</span>
+                  <span>50.234 học viên</span>
+                </div>
+                <div class="course-rating">4.9</div>
+                <a href="#" class="btn-course">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="course-card">
+              <img
+                src="/image/trangchu/sanpham3.jpg"
+                alt="Khóa học 3"
+                class="course-img"
+              />
+              <div class="course-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="course-info">
+                  <span>128 bài học</span>
+                  <span>50.234 học viên</span>
+                </div>
+                <div class="course-rating">4.9</div>
+                <a href="#" class="btn-course">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="course-card">
+              <img
+                src="/image/trangchu/sanpham4.jpg"
+                alt="Khóa học 4"
+                class="course-img"
+              />
+              <div class="course-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="course-info">
+                  <span>128 bài học</span>
+                  <span>50.234 học viên</span>
+                </div>
+                <div class="course-rating">4.9</div>
+                <a href="#" class="btn-course">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TÀI LIỆU NỔI BẬT ========== -->
+    <section class="featured-courses py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">Tài liệu nổi bật</h2>
+
+        <div class="row g-4">
+          <!-- Document 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="doc-card">
+              <img
+                src="/image/trangchu/tailieu1.png"
+                alt="Tài liệu 1"
+                class="doc-img"
+              />
+              <div class="doc-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+
+                <div class="doc-tags">
+                  <span>cơ bản</span>
+                  <span>CSS</span>
+                  <span>30 trang</span>
+                </div>
+
+                <p>
+                  Khóa học C++ nâng cao được thiết kế dành cho những bạn sinh
+                  viên đã có nền tảng cơ bản về C++.
+                </p>
+
+                <a href="#" class="btn-doc">Xem thêm...</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="doc-card">
+              <img
+                src="/image/trangchu/tailieu2.png"
+                alt="Tài liệu 2"
+                class="doc-img"
+              />
+              <div class="doc-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="doc-tags">
+                  <span>cơ bản</span>
+                  <span>CSS</span>
+                  <span>30 trang</span>
+                </div>
+                <p>
+                  Khóa học C++ nâng cao được thiết kế dành cho những bạn sinh
+                  viên đã có nền tảng cơ bản về C++.
+                </p>
+                <a href="#" class="btn-doc">Xem thêm...</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="doc-card">
+              <img
+                src="/image/trangchu/tailieu3.png"
+                alt="Tài liệu 3"
+                class="doc-img"
+              />
+              <div class="doc-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="doc-tags">
+                  <span>cơ bản</span>
+                  <span>CSS</span>
+                  <span>30 trang</span>
+                </div>
+                <p>
+                  Khóa học C++ nâng cao được thiết kế dành cho những bạn sinh
+                  viên đã có nền tảng cơ bản về C++.
+                </p>
+                <a href="#" class="btn-doc">Xem thêm...</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Document 4 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="doc-card">
+              <img
+                src="/image/trangchu/tailieu4.png"
+                alt="Tài liệu 4"
+                class="doc-img"
+              />
+              <div class="doc-body">
+                <h5>HTML/CSS Cho người mới bắt đầu - Codegym</h5>
+                <div class="doc-tags">
+                  <span>cơ bản</span>
+                  <span>CSS</span>
+                  <span>30 trang</span>
+                </div>
+                <p>
+                  Khóa học C++ nâng cao được thiết kế dành cho những bạn sinh
+                  viên đã có nền tảng cơ bản về C++.
+                </p>
+                <a href="#" class="btn-doc">Xem thêm...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== LỢI ÍCH NỔI BẬT ====== -->
+    <section id="benefits" class="benefits-section py-5">
+      <div class="container">
+        <!-- Tiêu đề -->
+        <div class="text-center mb-4">
+          <h2 class="benefits-title fw-bold">
+            Lợi ích khi học tại Website của chúng tôi
+          </h2>
+          <p class="benefits-subtitle text-muted">
+            Mang đến trải nghiệm học tập linh hoạt, hiệu quả và hiện đại cho
+            sinh viên.
+          </p>
+        </div>
+
+        <!-- Các lợi ích -->
+        <div class="row g-4">
+          <!-- Item 1 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="benefit-card h-100 text-center">
+              <div class="benefit-icon-wrapper mx-auto">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <h5 class="benefit-title">Giảng viên chất lượng</h5>
+              <p class="benefit-desc">
+                Nội dung được xây dựng bởi những giảng viên, mentor có kinh
+                nghiệm thực tế.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="benefit-card h-100 text-center">
+              <div class="benefit-icon-wrapper mx-auto">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h5 class="benefit-title">Học mọi lúc, mọi nơi</h5>
+              <p class="benefit-desc">
+                Bài giảng online, truy cập dễ dàng trên máy tính, tablet và điện
+                thoại.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="benefit-card h-100 text-center">
+              <div class="benefit-icon-wrapper mx-auto">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h5 class="benefit-title">Cộng đồng học tập</h5>
+              <p class="benefit-desc">
+                Tham gia nhóm học viên để trao đổi kiến thức, hỏi đáp và chia sẻ
+                tài liệu.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="benefit-card h-100 text-center">
+              <div class="benefit-icon-wrapper mx-auto">
+                <i class="bi bi-patch-check-fill"></i>
+              </div>
+              <h5 class="benefit-title">Chứng nhận hoàn thành</h5>
+              <p class="benefit-desc">
+                Nhận chứng nhận sau khi hoàn thành khóa học, hỗ trợ tốt cho hồ
+                sơ của bạn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HỌC VIÊN NÓI GÌ VỀ CHÚNG TÔI ========== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="testimonials-title text-center">
+          Học viên nói gì về chúng tôi
+        </h2>
+
+        <div
+          id="testimonialsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- SLIDE 1 -->
+            <div class="carousel-item active">
+              <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Nhờ Lesson mà mình biết đến lập trình và dần biến nó thành
+                      đam mê. Kiến thức nền đã vững hơn rất nhiều.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Đăng Quang</h6>
+                        <small>Học viên</small>
+                      </div>
+                      <img src="/image/trangchu/avatar1.png" alt="Đăng Quang" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Sau khi hoàn thành khóa học, điều mình thích nhất là tự
+                      viết được những đoạn mã hoạt động như mong muốn.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Dương Nguyễn</h6>
+                        <small>Học viên</small>
+                      </div>
+                      <img
+                        src="/image/trangchu/avatar2.png"
+                        alt="Dương Nguyễn"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Con mình mới học lập trình nhưng đã rất hứng thú. Mình yên
+                      tâm vì nội dung rõ ràng, dễ theo dõi.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Dung Trần</h6>
+                        <small>Phụ huynh</small>
+                      </div>
+                      <img src="/image/trangchu/avatar3.png" alt="Dung Trần" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="carousel-item">
+              <div class="row g-4">
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Bài tập thực hành phong phú giúp mình nhớ lâu và áp dụng
+                      được ngay.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Minh Anh</h6>
+                        <small>Học viên</small>
+                      </div>
+                      <img src="/image/trangchu/avatar4.png" alt="Minh Anh" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Con mình mới học lập trình nhưng đã rất hứng thú. Mình yên
+                      tâm vì nội dung rõ ràng, dễ theo dõi.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Dung Trần</h6>
+                        <small>Phụ huynh</small>
+                      </div>
+                      <img src="/image/trangchu/avatar3.png" alt="Dung Trần" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="testimonial-card">
+                    <span class="quote-icon">❝</span>
+                    <p>
+                      Con mình mới học lập trình nhưng đã rất hứng thú. Mình yên
+                      tâm vì nội dung rõ ràng, dễ theo dõi.
+                    </p>
+                    <div class="student-info">
+                      <div>
+                        <h6>Dung Trần</h6>
+                        <small>Phụ huynh</small>
+                      </div>
+                      <img src="/image/trangchu/avatar3.png" alt="Dung Trần" />
+                    </div>
+                  </div>
+                </div>
+                <!-- Có thể thêm Card 6 nếu muốn -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Dots -->
+          <div class="carousel-indicators testimonial-dots">
+            <button
+              type="button"
+              data-bs-target="#testimonialsCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#testimonialsCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <!-- nếu thêm slide thì thêm button tương ứng -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo + Contact -->
+          <div class="col-12 col-md-5">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <img
+                src="/image/trangchu/logo2.png"
+                alt="Lesson Logo"
+                class="footer-logo"
+              />
+              <span class="footer-name ms-2">Lesson</span>
+            </div>
+
+            <ul class="footer-contact list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill me-2"></i> 0123456789
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                duykhoi26082006@gmail.com
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Địa chỉ: 128 Lê Duẩn, Bến Thủy, TP. Vinh, Nghệ An
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-12 col-md-3">
+            <h5 class="footer-title mb-3">Tiện ích</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+              <li><a href="./tailieu.html">Tài liệu</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./sukien.html">Sự kiện</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-4">
+            <h5 class="footer-title mb-3">Kết nối với chúng tôi</h5>
+            <div class="footer-social d-flex flex-wrap gap-3">
+              <a href="#"><img src="/image/trangchu/facebook.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/tiktok.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/youtube.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/twiter.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/intagram.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/thread.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS riêng -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

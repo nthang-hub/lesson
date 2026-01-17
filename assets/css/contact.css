@@ -1,0 +1,135 @@
+/* ================== CƠ BẢN TRANG LIÊN HỆ ================== */
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #e9f4fb;
+}
+
+/* =============== KHUNG TỔNG LIÊN HỆ =============== */
+
+.contact-section {
+  background: #e9f4fb;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+}
+
+/* Card bao toàn bộ phần LIÊN HỆ + FORM */
+.contact-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eef4f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =============== PHẦN LIÊN HỆ VỚI CHÚNG TÔI) =============== */
+
+.contact-header {
+  background: linear-gradient(135deg, #2c5876, #4fa3c3);
+  color: #fff;
+  padding: 30px 20px 35px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.icon {
+  text-align: center;
+}
+
+.icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 8px;
+  transition: transform 0.25s ease;
+}
+
+.icon img:hover {
+  transform: scale(1.12);
+}
+
+.icon p {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* =============== PHẦN FORM GỬI EMAIL =============== */
+
+.contact-form {
+  padding: 35px 50px 40px;
+  text-align: center;
+  background: #eef4f5;
+}
+
+.contact-form h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.contact-form .form-control {
+  border-radius: 10px;
+  padding: 10px 14px;
+  border: 1px solid #aaa;
+}
+
+.contact-form .form-control:focus {
+  border-color: #63c5ff;
+  box-shadow: 0 0 5px rgba(99, 197, 255, 0.7);
+}
+
+.contact-btn {
+  background-color: #39a8d6;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+}
+
+.contact-btn:hover {
+  background-color: #2b86ad;
+}
+
+/* =============== RESPONSIVE =============== */
+
+@media (max-width: 991.98px) {
+  .contact-wrapper {
+    margin: 24px auto 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-header h1 {
+    font-size: 20px;
+  }
+
+  .contact-form {
+    padding: 24px 16px 30px;
+  }
+}
+
+/* mobile nhỏ */
+@media (max-width: 575.98px) {
+  .icon img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Header Demo</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS riêng -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/gioithieu.css" />
+  </head>
+
+  <body>
+    <header class="site-frame">
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+          <!-- Logo ảnh -->
+          <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="/image/trangchu/logo2.png" alt="Logo" />
+            <span class="brand-name">Lesson</span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./khoahoc.html">Khóa học</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./tailieu.html">Tài liệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Giới thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">Liên hệ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sukien.html">Sự kiện</a>
+              </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+              <a class="signin-link" href="/signin.html">Đăng nhập</a>
+              <a class="btn btn-register" href="/signup.html">Đăng kí</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ====== BANNER GIỚI THIỆU NHÓM ====== -->
+    <section class="team-banner">
+      <div class="team-banner-overlay"></div>
+
+      <div class="team-banner-content container">
+        <h1 class="team-title">ĐỘI NGŨ PHÁT TRIỂN</h1>
+        <p class="team-subtitle">Nhiệt huyết – Sáng tạo – Chuyên nghiệp</p>
+      </div>
+    </section>
+
+    <!-- ====== TÌM HIỂU VỀ CHÚNG TÔI ====== -->
+    <section class="about-mission-section py-4">
+      <div class="container-xxl">
+        <div class="about-mission-box rounded-3 px-4 px-md-5 py-4">
+          <!-- Tiêu đề -->
+          <h2 class="text-center fw-bold mb-4">Tìm hiểu về chúng tôi</h2>
+
+          <!-- Hàng 1: Mission + Chúng tôi là ai -->
+          <div class="row align-items-center mb-4 g-4">
+            <!-- Ảnh Mission -->
+            <div class="col-lg-6 text-center text-lg-start">
+              <!-- ĐỔI đường dẫn ảnh cho đúng -->
+              <img
+                src="https://codelearn.io/images/about-us/3.png"
+                alt="Mission"
+                class="img-fluid about-mission-img"
+              />
+            </div>
+
+            <!-- Chúng tôi là ai -->
+            <div class="col-lg-6">
+              <h5 class="about-subtitle">CHÚNG TÔI LÀ AI?</h5>
+              <p class="about-text">
+                <b>Lesson</b> là một hệ thống và nền tảng tương tác trực tuyến
+                cho phép người dùng học tập, thực hành và đánh giá các kỹ năng
+                lập trình thông qua các bài tập thực hành, các cuộc thi lập
+                trình với chức năng chấm điểm tự động để người dùng có thể cải
+                thiện kỹ năng và nâng cao năng suất.
+              </p>
+            </div>
+          </div>
+
+          <!-- Hàng 2: Tầm nhìn + Bản đồ -->
+          <div class="row align-items-center g-4">
+            <!-- Tầm nhìn -->
+            <div class="col-lg-6">
+              <h5 class="about-subtitle">TẦM NHÌN</h5>
+              <p class="about-text">
+                Dù bạn là ai, <b>Lesson</b> sẽ luôn giúp bạn khám phá giới hạn
+                của chính mình. Chúng tôi hứa sẽ mang đến một kênh để các lập
+                trình viên có thể chia sẻ kiến thức của mình không chỉ ở Việt
+                Nam mà còn rộng ra là ở Đông Nam Á và toàn châu Á.
+              </p>
+            </div>
+
+            <!-- Ảnh bản đồ -->
+            <div class="col-lg-6 text-center">
+              <!-- ĐỔI đường dẫn ảnh cho đúng -->
+              <img
+                src="https://codelearn.io/images/about-us/4.png"
+                alt="Cộng đồng người dùng trên toàn thế giới"
+                class="img-fluid about-map-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SỨ MỆNH VÀ TẦM NHÌN ===== -->
+    <section id="mission-vision" class="mission-vision py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="mv-title">Sứ mệnh và tầm nhìn</h2>
+          <p class="mv-subtitle">
+            Xây dựng một nền tảng học lập trình trực tuyến thân thiện, hiệu quả
+            và đồng hành cùng người học trên mọi chặng đường.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-5">
+            <article class="mv-card mv-card--blue" data-mv-animate>
+              <div class="mv-card-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Tri thức</h3>
+                <p class="mb-0">
+                  Các khóa học trực tuyến từ cơ bản đến nâng cao phù hợp với mục
+                  đích thực hành và học tập của mỗi người dùng khác nhau.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-5">
+            <article class="mv-card mv-card--green" data-mv-animate>
+              <div class="mv-card-icon">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Sân chơi trí tuệ</h3>
+                <p class="mb-0">
+                  Số lượng lớn các bài tập và bài toán khuyến khích người dùng
+                  áp dụng nhiều cách giải khác nhau bằng nhiều ngôn ngữ lập
+                  trình khác nhau.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-5">
+            <article class="mv-card mv-card--teal" data-mv-animate>
+              <div class="mv-card-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Kết nối</h3>
+                <p class="mb-0">
+                  Một cộng đồng để các lập trình viên có thể cùng nhau giải
+                  quyết bài toán, trao đổi, chia sẻ kinh nghiệm và học hỏi lẫn
+                  nhau.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-5">
+            <article class="mv-card mv-card--orange" data-mv-animate>
+              <div class="mv-card-icon">
+                <i class="bi bi-emoji-smile-fill"></i>
+              </div>
+              <div class="mv-card-body">
+                <h3 class="mv-card-title">Sự hài lòng của người dùng</h3>
+                <p class="mb-0">
+                  Trở thành người bạn đồng hành đáng tin cậy, cung cấp các khóa
+                  học chất lượng, hỗ trợ nhanh chóng và lắng nghe phản hồi từ
+                  người học.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ĐỘI NGŨ PGATS TRIỂN -->
+    <section class="team-section py-5">
+      <div class="container">
+        <h2 class="team-title text-center mb-4">ĐỘI NGŨ CỦA CHÚNG TÔI</h2>
+
+        <div class="row justify-content-center g-5">
+          <!-- Member 1 -->
+          <div class="col-md-4 col-12 text-center">
+            <div class="team-card">
+              <img
+                src="/image/trangchu/NGUYENVANKHOI.jpg"
+                alt="Nguyen Van Khoi"
+                class="team-avatar"
+              />
+              <h4 class="team-name mt-3">NGUYỄN VĂN KHÔI</h4>
+              <p class="team-role">Lập trình viên</p>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="col-md-4 col-12 text-center">
+            <div class="team-card">
+              <img
+                src="/image/trangchu/NGUYENTHIHANG.jpg"
+                alt="Nguyen Thi Hang"
+                class="team-avatar"
+              />
+              <h4 class="team-name mt-3">NGUYỄN THỊ HẰNG</h4>
+              <p class="team-role">Lập trình viên</p>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="col-md-4 col-12 text-center">
+            <div class="team-card">
+              <img
+                src="/image/trangchu/DAOCONGKHA.jpg"
+                alt="Dao Cong Kha"
+                class="team-avatar"
+              />
+              <h4 class="team-name mt-3">ĐÀO CÔNG KHẢ</h4>
+              <p class="team-role">Lập trình viên</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <!-- Logo + Contact -->
+          <div class="col-12 col-md-5">
+            <div class="footer-brand d-flex align-items-center mb-3">
+              <img
+                src="/image/trangchu/logo2.png"
+                alt="Lesson Logo"
+                class="footer-logo"
+              />
+              <span class="footer-name ms-2">Lesson</span>
+            </div>
+
+            <ul class="footer-contact list-unstyled">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-telephone-fill me-2"></i> 0123456789
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bi bi-envelope-fill me-2"></i>
+                duykhoi26082006@gmail.com
+              </li>
+              <li class="d-flex align-items-start">
+                <i class="bi bi-geo-alt-fill me-2"></i>
+                Địa chỉ: 128 Lê Duẩn, Bến Thủy, TP. Vinh, Nghệ An
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-12 col-md-3">
+            <h5 class="footer-title mb-3">Tiện ích</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./khoahoc.html">Khóa học</a></li>
+              <li><a href="./tailieu.html">Tài liệu</a></li>
+              <li><a href="./gioithieu.html">Giới thiệu</a></li>
+              <li><a href="./sukien.html">Sự kiện</a></li>
+              <li><a href="./contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="col-12 col-md-4">
+            <h5 class="footer-title mb-3">Kết nối với chúng tôi</h5>
+            <div class="footer-social d-flex flex-wrap gap-3">
+              <a href="#"><img src="/image/trangchu/facebook.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/tiktok.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/youtube.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/twiter.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/intagram.jpg" alt="" /></a>
+              <a href="#"><img src="/image/trangchu/thread.jpg" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS riêng -->
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

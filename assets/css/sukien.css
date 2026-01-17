@@ -1,0 +1,403 @@
+/* ================== RESET NHẸ (chỉ áp dụng cho trang này) ================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Poppins", sans-serif;
+  background-color: #f7f8fb;
+  color: #1f2933;
+  margin: 0;
+}
+
+/* ================== BANNER TRANG SỰ KIỆN ================== */
+/* Khung banner */
+.banner {
+  width: 100%;
+  max-height: 230px;      /* 👈 GIỚI HẠN CHIỀU CAO BANNER */
+  overflow: hidden;       /* Cắt bớt phần bị thừa */
+}
+
+/* Ảnh trong banner */
+.banner img {
+  width: 100%;
+  height: 100%;
+  max-height: 230px;      /* cùng giá trị với .banner */
+  object-fit: cover;      /* phóng to vừa khung, không kéo méo, phần thừa bị cắt */
+  display: block;
+}
+
+/* Mobile: banner thấp hơn một chút cho đỡ chiếm chỗ */
+@media (max-width: 768px) {
+  .banner {
+    max-height: 180px;
+  }
+  .banner img {
+    max-height: 180px;
+  }
+}
+
+/* ================== TOP SALE BANNERS ================== */
+.top-sale-banners .sale-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.top-sale-banners img {
+  display: block;
+  height: 160px;
+  object-fit: cover;
+}
+
+.sale-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.15)
+  );
+  color: #fff;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.sale-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.sale-text {
+  font-size: 0.8rem;
+  opacity: 0.95;
+}
+
+/* ================== EVENTS MAIN ================== */
+.events-main {
+  background-color: #f9fafb;
+}
+
+/* Title + Filter */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.filter-btn {
+  font-size: 0.78rem;
+  border-radius: 999px;
+  padding-inline: 0.75rem;
+}
+
+.filter-btn.active {
+  background-color: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+/* ==== CARD SỰ KIỆN ==== */
+.event-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 12px 12px;
+  display: flex;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+  border-color: #cbd5f5;
+}
+
+.event-thumb {
+  flex: 0 0 110px;
+  height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.event-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-category {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+}
+
+.event-category.laptrinh {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.event-category.thietke {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.event-category.kynang {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.event-category.ngoaingu {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.event-status {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.event-status.upcoming {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.event-status.ongoing {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.event-status.finished {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.event-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 4px 0;
+  color: #111827;
+}
+
+.event-meta {
+  font-size: 0.78rem;
+  color: #6b7280;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.event-meta i {
+  font-size: 0.85rem;
+}
+
+.event-desc {
+  font-size: 0.78rem;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.event-speaker {
+  font-size: 0.76rem;
+  color: #6b7280;
+}
+
+.event-actions .btn {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* Pagination */
+.pagination-wrapper .page-link {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin: 0 3px;
+  color: #374151;
+}
+
+.pagination-wrapper .page-item.active .page-link {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+/* ================== SIDEBAR ================== */
+.sidebar-box {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 14px 14px;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.sidebar-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Related events list */
+.related-item {
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  border-radius: 10px;
+  gap: 10px;
+  transition: background-color 0.15s ease;
+  margin-bottom: 6px;
+}
+
+.related-item:hover {
+  background-color: #f3f4ff;
+}
+
+.related-thumb {
+  flex: 0 0 70px;
+  height: 52px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e5e7eb;
+}
+
+.related-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-body {
+  flex: 1;
+}
+
+.related-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.related-meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Social */
+.social-list .social-item {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.social-item.facebook {
+  background-color: #1877f2;
+}
+
+.social-item.youtube {
+  background-color: #ff0000;
+}
+
+.social-item.tiktok {
+  background-color: #000000;
+}
+
+.social-item.instagram {
+  background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f);
+}
+
+.social-item.twitter {
+  background-color: #111827;
+}
+
+.social-item:hover {
+  filter: brightness(1.05);
+}
+
+/* ================== BACK TO TOP ================== */
+.back-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.55);
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: #1d4ed8;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 767.98px) {
+  .top-sale-banners img {
+    height: 140px;
+  }
+
+  .event-card {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .event-card {
+    flex-direction: column;
+  }
+
+  .event-thumb {
+    width: 100%;
+  }
+}
